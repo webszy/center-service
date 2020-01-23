@@ -1,0 +1,6 @@
+{
+  "logDirectory":"./logs",
+  "logFormat":":remote-addr - :remote-user [:date[iso]] ":method :url HTTP/:http-version" :status :res[content-length] - :response-time ms",
+  "development":{},
+  "prodcution":{}
+}
