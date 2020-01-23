@@ -1,6 +1,6 @@
 module.exports = {
   apps: [{
-    name: 'auto_checker',
+    name: 'centers',
     script: 'npm start',
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/

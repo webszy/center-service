@@ -22,7 +22,7 @@ const logFileName = (time, index) => {
   const minute = pad(time.getMinutes())
   return `access-${month}/${month}${day}-${hour}${minute}-${index}.log`
 }
-var logDirectory = path.join(__dirname, config.logDirectory)
+const logDirectory = path.join(__dirname, config.logDirectory)
 // ensure log directory exists
 fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory)
 const accessLogStream = rfs.createStream(logFileName, {
