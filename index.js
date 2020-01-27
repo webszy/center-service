@@ -3,11 +3,12 @@ const express = require('express')
 const path = require('path')
 const fs = require('fs-extra')
 const rfs = require('rotating-file-stream')
-const app = express()
 const cors = require('cors')
 const hemlet = require('helmet')
 const morgan = require('morgan')
 const config = require('./config.json')
+const app = express()
+
 // global variables
 const port = process.env.PORT || 3000
 // const env = process.env.NODE_ENV
@@ -33,7 +34,7 @@ const accessLogStream = rfs.createStream(logFileName, {
 // express midware
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-app.use(cors({ optionsSuccessStatus: 204 }))
+app.use(cors())
 app.use(hemlet())
 app.use(morgan(config.logFormat, { stream: accessLogStream }))
 // set view engine:art

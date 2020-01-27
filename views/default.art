@@ -12,5 +12,6 @@
   <body>
     <h2>hello world</h2>
     <p>this page is generatred by {{title}}</p>
+    <a href={{author.link}} title="github repo">{{author.name}}</a>
   </body>
 </html>
