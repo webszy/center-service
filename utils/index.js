@@ -1,0 +1,1 @@
+import rules from './rules'
