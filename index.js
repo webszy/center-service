@@ -43,9 +43,12 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'art')
 // set static
 app.use(express.static(path.join(__dirname, 'public')))
+// import controllers (router handler function)
+const IndexController = require('./routes/index')
+const RegisterController = require('./routes/serviceRegister')
 // set router
-app.use('/', require('./routes/index'))
-app.use('/service', require('./routes/serviceRegister'))
+app.get('/',IndexController.get)
+app.post('/service',RegisterController.post)
 // catch 404
 app.use((req, res, next) => {
   next(createError(404))
