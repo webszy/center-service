@@ -45,6 +45,7 @@ app.set('view engine', 'art')
 app.use(express.static(path.join(__dirname, 'public')))
 // set router
 app.use('/', require('./routes/index'))
+app.use('/service', require('./routes/serviceRegister'))
 // catch 404
 app.use((req, res, next) => {
   next(createError(404))
