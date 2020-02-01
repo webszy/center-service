@@ -1,7 +1,5 @@
 // created by webszy 2020-01-27
 
-
-
 const keyNum = obj => Object.keys(obj)
 const hasThisProp = val => !['', null, undefined, 'null', 'undefined'].includes(val)
 const basicType = type => ['number', 'object', 'array', 'string', 'boolean'].includes(type)
@@ -13,7 +11,7 @@ const basicType = type => ['number', 'object', 'array', 'string', 'boolean'].inc
  * @param {*} rules ->[{target:'ONE',required:true,type:'Number'}]
  * @return Boolean
  */
-export function commonVaildator(data, rules) {
+function commonVaildator(data, rules) {
   if (keyNum(data) === 0 || keyNum(rules) === 0) {
     return {
       result: false,
@@ -43,3 +41,4 @@ export function commonVaildator(data, rules) {
     }
   }
 }
+module.exports = commonVaildator

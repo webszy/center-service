@@ -1,3 +1,6 @@
-export default {
-  
-}
+export default [
+  {
+    target: 'package',
+    required: true,
+  }
+]
