@@ -21,7 +21,8 @@
     "helmet": "^3.21.2",
     "http-errors": "^1.7.3",
     "morgan": "^1.9.1",
-    "rotating-file-stream": "^2.0.1"
+    "rotating-file-stream": "^2.0.1",
+    "umi-request": "^1.2.18"
   },
   "devDependencies": {
     "cross-env": "^6.0.3"
